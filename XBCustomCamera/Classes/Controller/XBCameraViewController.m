@@ -109,6 +109,8 @@
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     self.recorderManager.preViewLayer.frame = self.contentView.preViewLayerBackView.bounds;
+    
+    NSLog(@"frame = %@",NSStringFromCGRect(self.contentView.preViewLayerBackView.bounds));
 }
 
 #pragma mark - Notifications

@@ -359,7 +359,8 @@
 - (UIButton *)closeButton {
     if (!_closeButton) {
         _closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_closeButton setImage:[UIImage xb_imageNamed:@"camera_cancel_icon" inBundle:@"XBCustomCamera"] forState:UIControlStateNormal];
+        UIImage *image = [UIImage xb_imageNamed:@"camera_cancel_icon" inBundle:@"XBCustomCamera"];
+        [_closeButton setImage:image forState:UIControlStateNormal];
         [_closeButton addTarget:self action:@selector(closeButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _closeButton;
